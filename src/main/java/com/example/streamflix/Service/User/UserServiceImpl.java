@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
     public List<UserDto> getAllUsers() {
         List<User> users = userRepository.findAll();
         return users.stream()
-                .map(UserMapper.INSTANCE::toUserDto) // Using MapStruct for DTO conversion
+                .map(UserMapper.INSTANCE::toUserDto)
                 .collect(Collectors.toList());
     }
 
